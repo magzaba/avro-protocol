@@ -12,6 +12,20 @@ spring:
         registry:
           url: "http://localhost:8081"
 
+  consumer:
+    group-id: "mzaba-avro-consumer-id"
+    keyDeserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+    valueDeserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+    autoOffsetReset: "earliest"
+    properties:
+      schema:
+        registry:
+          url: "http://localhost:8081"
+      specific:
+        avro:
+          reader: "true"
+
+
 avro:
   topic:
     name: "avro.protocol.topic"
