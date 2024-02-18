@@ -1,0 +1,27 @@
+{
+    "type": "record",
+    "name": "Book",
+    "namespace": "mzaba.avroprotocol.schema",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "title",
+            "type": ["null","string"],
+            "default": null
+        },
+        {
+            "name": "author",
+            "type": ["null","string"],
+            "default": null
+        },
+        {
+            "name": "price",
+            "type": "float",
+            "default": 0.00
+        }
+    ]
+}
